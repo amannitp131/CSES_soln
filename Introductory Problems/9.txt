@@ -1,0 +1,16 @@
+Important points used in solving the permutation generation problem:
+
+1. Backtracking/Recursion:
+   - The solution uses a recursive function to generate all possible permutations of the input string.
+
+2. Tracking Used Characters:
+   - A boolean vector tracks which characters have been used in the current permutation to avoid repetition.
+
+3. Avoiding Duplicates:
+   - A set is used to store permutations, ensuring only unique permutations are kept (handles repeated characters in the input).
+
+4. Base Case:
+   - When the temporary string reaches the length of the input, it is added to the set of results.
+
+5. Output:
+   - After generating all unique permutations, the code prints the total count and each permutation in lexicographical order.
