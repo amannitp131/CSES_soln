@@ -43,6 +43,17 @@ void solve() {
 cout<<ans<<endl;
    
 }
+
+// Connected Components in a Grid" using DFS (Flood Fill)
+// This is a classic pattern where you:
+// Traverse a 2D matrix
+// Use DFS/BFS/Union-Find to find connected regions 
+// under certain conditions (e.g., ., 1, or specific values)
+
+// similar leetcode questions are
+// https://leetcode.com/problems/number-of-islands/description/
+// https://leetcode.com/problems/max-area-of-island/description/
+// https://leetcode.com/problems/flood-fill/description/
  
  
  
