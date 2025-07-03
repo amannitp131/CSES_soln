@@ -25,6 +25,22 @@ void solve() {
    
 }
 
+// Missing Number in Arithmetic Sequence" / Math-based Array Pattern
+//  What the code does:
+// You are given n-1 numbers from the sequence 1 to n with one number missing.
+
+// You calculate the expected sum of numbers from 1 to n 
+ 
+// Then subtract the actual sum of input numbers to find the missing one.
+
+// Similar leetcode question
+// https://leetcode.com/problems/missing-number/description/
+// https://leetcode.com/problems/first-missing-positive/description/
+// https://leetcode.com/problems/set-mismatch/
+// https://leetcode.com/problems/find-the-duplicate-number/
+// https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
+
+
 
 
 

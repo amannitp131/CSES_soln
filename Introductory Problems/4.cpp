@@ -30,6 +30,23 @@ void solve() {
    
 }
 
+// Make Array Non-Decreasing with Minimum Operations
+
+// The only allowed operation is:
+// Increase the current element to match the previous one if it's smaller.
+// You track the total amount of increase (cost) needed.
+
+// This is a classic greedy, prefix-based pattern:
+// Walk left to right.
+// If current element arr[i] < arr[i-1], you increase arr[i] to arr[i-1].
+// Add the difference to your ans.
+
+// similar leetcode question:
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+// https://leetcode.com/problems/minimum-time-to-make-rope-colorful/description/
+// https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
+// https://leetcode.com/problems/ways-to-make-a-fair-array/description/
+
 
 
 

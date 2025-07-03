@@ -26,6 +26,20 @@ void solve() {
    
 }
 
+// Count Distinct Elements Using a Set
+// You're given a sequence of elements (e.g., numbers, strings, characters) and you need to:
+// Count how many unique elements exist in that sequence.
+// The simplest and most efficient way is to use a set (or unordered_set in C++), because:
+// Insertion and lookup are O(1) on average (O(log n) for set in C++).
+// Duplicates are automatically handled (ignored).
+
+// Similar leetcode question:
+// https://leetcode.com/problems/unique-number-of-occurrences/description/
+// https://leetcode.com/problems/contains-duplicate/description/
+// https://leetcode.com/problems/single-number/description/
+// https://leetcode.com/problems/intersection-of-two-arrays/description/
+// https://leetcode.com/problems/longest-consecutive-sequence/description/
+
 
 
 
