@@ -45,8 +45,6 @@ cout<<n-cnt<<endl;
 // Similar leetcode question
 // https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
 // https://leetcode.com/problems/move-zeroes/description/
-// https://leetcode.com/problems/3sum/description/
-// https://leetcode.com/problems/4sum/description/
 
 
 
