@@ -44,7 +44,6 @@ void solve() {
 // similar leetcode question:
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 // https://leetcode.com/problems/minimum-time-to-make-rope-colorful/description/
-// https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
 // https://leetcode.com/problems/ways-to-make-a-fair-array/description/
 
 

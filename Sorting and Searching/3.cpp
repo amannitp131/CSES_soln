@@ -15,25 +15,38 @@ const int MOD = 1e9 + 7;
 void solve() {
    ll n,x;
    cin>>n>>x;
-   vector<int> arr(n);
+   vector<ll> arr(n);
    for(int i=0;i<n;i++){
     cin>>arr[i];
    }
-   int ans=0;
+   int cnt=0;
    sort(arr.begin(),arr.end());
-   for(int i=0;i<n;i++){
-    if(arr[i]+arr[i+1]<=x){
-        ans++;
-        i++;
-    }else{
-        ans=n-i+1;
-        break;
-    }
+   int i=0,j=n-1;
+   while(i<j){
+      if(arr[i]+arr[j]>x){
+        j--;
+      }else{
+         cnt++;
+         i++;j--;
+      }
    }
-cout<<ans<<endl;
+cout<<n-cnt<<endl;
    
 }
 
+// Greedy Pairing with Two Pointers
+
+// You're given an array of n elements and a value x.
+// You can pair up elements such that the sum of any pair ≤ x, and 
+// each element can be used at most once.
+// You want to minimize the number of remaining elements (or equivalently,
+//  maximize the number of valid pairs).
+
+// Similar leetcode question
+// https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
+// https://leetcode.com/problems/move-zeroes/description/
+// https://leetcode.com/problems/3sum/description/
+// https://leetcode.com/problems/4sum/description/
 
 
 
