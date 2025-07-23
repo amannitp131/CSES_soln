@@ -1,5 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+//  a multiset always stores its elements in increasing (sorted) order by default.
+
 int main() {
     multiset<int> ms;
     /////////////

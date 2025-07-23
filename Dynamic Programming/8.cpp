@@ -1,4 +1,4 @@
-// https://cses.fi/problemset/task/2431
+// https://cses.fi/problemset/task/1145
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -11,26 +11,36 @@ typedef long long int ll;
     }
 const int MOD = 1e9 + 7;
 
-void solve(int k) {
-    int p=9,cnt=1;
-    while(k-p*cnt>0){
-        k=k-p*cnt;
-        p=p*10;cnt++;
-    }
-    for(int i=pow(10,cnt-1);i<1e18;i++){
-        k=k-cnt;
-    }
+vector<int> temp;
+void recr(int n,vector<int>& arr,int idx){
+   for(int i=0;i<n;i++){
+    temp.push_back(arr[idx]);
+    recr(n,arr,idx);
+    temp.pop_back();
+    recr(n,arr,idx+1);
+   }
 }
+
+void solve() {
+   int n;
+   cin>>n;
+   vector<int> arr(n);
+   for(int i=0;i<n;i++){
+    cin>>arr[i];
+   }
+
+   
+}
+
+
+
 
 int main() {
     fast();
     int t;
-    cin >> t;
-    
+    cin>>t;
     while (t--) {
-        int k;
-        cin>>k;
-        solve(k);
+        solve();
     }
     return 0;
 }

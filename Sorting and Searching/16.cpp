@@ -13,16 +13,27 @@ const int MOD = 1e9 + 7;
 
 
 void solve() {
-   int x,n;
-   cin>>x>>n;
-   vector<int> arr(n);
-   int l=0,r=x;
-   for(int i=0;i<n;i++){
-     if(arr[i]>l && arr[i]<x){
-        
-     }
-   }
-   
+    int x, n;
+    cin >> x >> n;
+    vector<int> arr(n);
+    multiset<int> pos;
+    pos.insert(0);
+    pos.insert(x);
+    multiset<int> segment;
+    segment.insert(x);
+    for (int i = 0;i < n;i++) {
+        cin >> arr[i];
+        auto idx = pos.upper_bound(arr[i]);
+        auto right = idx;
+        auto left = prev(idx);
+        segment.erase(segment.find(*right - *left));
+        segment.insert(arr[i] - *left);
+        segment.insert(*right - arr[i]);
+        pos.insert(arr[i]);
+        cout << *segment.rbegin() << " ";
+    }
+
+
 }
 
 
@@ -31,7 +42,7 @@ void solve() {
 int main() {
     fast();
     int t;
-    cin>>t;
+    t = 1;
     while (t--) {
         solve();
     }

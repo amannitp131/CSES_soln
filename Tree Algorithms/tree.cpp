@@ -111,16 +111,50 @@ vector<int> iterative_preorder_traversal(Node* root) {
 
 vector<int> iterative_postorder_traversal(Node* root) {
     vector<int> ans;
-    stack<Node*> st;
-    while(!st.empty()){
-        Node* curr=st.top();
-        st.push(curr);
-        st.pop();
-        while(curr->right!=nullptr){
-           st.push(curr->right);
-        }
-        st.push(curr->left);
+    if (root == nullptr) return ans;
+    stack<Node*> st1, st2;
+    st1.push(root);
+    while (!st1.empty()) {
+        Node* curr = st1.top();
+        st1.pop();
+        st2.push(curr);
+        if (curr->left) st1.push(curr->left);
+        if (curr->right) st1.push(curr->right);
     }
+    while (!st2.empty()) {
+        ans.push_back(st2.top()->data);
+        st2.pop();
+    }
+    return ans;
+}
+
+//////////////////////////////////////
+///Depth of a tree //////////////////
+////////////////////////////////////
+
+int depth_of_tree(Node* root){
+    if(root==nullptr) return 0;
+
+    int l=depth_of_tree(root->left);
+    int r=depth_of_tree(root->right);
+    
+    return 1+max(l,r);
+}
+
+
+//////////////////////////////////////////////
+// Returns true if the tree is height-balanced
+//////////////////////////////////////////////
+
+bool isBalanced_tree(Node* root) {
+    if (root == nullptr) return true;
+
+    int l = depth_of_tree(root->left);
+    int r = depth_of_tree(root->right);
+
+    if (abs(l - r) > 1) return false;
+
+    return isBalanced_tree(root->left) && isBalanced_tree(root->right);
 }
 
 
@@ -131,5 +165,6 @@ int main() {
     root->left->right = new Node(30);
     root->right = new Node(40);
     root->right->left = new Node(50);
+    cout<<depth_of_tree(root)<<endl;
 
 }
